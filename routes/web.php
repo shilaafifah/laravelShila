@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::get('/home', function () {
+//     return view('home');
+// });
 
 Route::get('/about', function () {
     return view('about');
@@ -23,7 +23,7 @@ Route::get('/about', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Addchat::routes();
